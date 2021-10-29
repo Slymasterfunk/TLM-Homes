@@ -1,7 +1,23 @@
 import React from 'react'
 import Images from '../images/Images.js'
+import ContactForm from '../components/ContactForm'
+
 
 const IndexPage = () => {
+    // document.querySelector("form").addEventListener("submit", handleSubmit);
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     let myForm = document.getElementById('contact');
+    //     let formData = new FormData(myForm)
+
+    //     fetch('/', {
+    //         method: 'POST',
+    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //         body: new URLSearchParams(formData).toString()
+    //     }).then(() => console.log('Form successfully submitted')).catch((error) => alert(error))
+    // }
+
     return (
         <div>
             <img className='showcase-img' src={Images.renovation} alt='renovation' />
@@ -26,28 +42,28 @@ const IndexPage = () => {
                     </p>
                     <div className='pt-2 contact-flex'>
                         <div className='contact-form'>
-                            <form name='contact'
-                                method='POST'
-                                netlify-honeypot='bot-field'
-                                data-netlify='true'
+                            <ContactForm />
+                            {/* <form name='contact'
+                                method='post'
+                                id='contact'
+                                netlify-honeypot="bot-field"
+                                onSubmit={handleSubmit}
                                 netlify>
-                                <p class='hidden'>
-                                    <label>Don’t fill this out if you’re human: <input name='bot-field' /></label>
-                                </p>
+                                <input type="hidden" name="contact" value="contact" />
                                 <div className='row'>
                                     <div className='input50'>
-                                        <input type='text' name='First Name' placeholder='First Name' />
+                                        <input type='text' name='First Name' placeholder='First Name' required />
                                     </div>
                                     <div className='input50'>
-                                        <input type='text' name='Last Name' placeholder='Last Name' />
+                                        <input type='text' name='Last Name' placeholder='Last Name' required />
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='input50'>
-                                        <input type='email' name='Email' placeholder='Email' />
+                                        <input type='email' name='Email' placeholder='Email' required />
                                     </div>
                                     <div className='input50'>
-                                        <input type='text' name='Subject' placeholder='Subject' />
+                                        <input type='text' name='Subject' placeholder='Subject' required />
                                     </div>
                                 </div>
                                 <div className='row'>
@@ -57,10 +73,10 @@ const IndexPage = () => {
                                 </div>
                                 <div className='row'>
                                     <div className='input100'>
-                                        <button className='btn contact-btn' type='submit'>Submit</button>
+                                        <input type='submit'>Submit</input>
                                     </div>
                                 </div>
-                            </form>
+                            </form> */}
                         </div>
                         <div className='contact-info'>
                             <div className='info-box'>
