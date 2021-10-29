@@ -1,23 +1,8 @@
 import React from 'react'
 import Images from '../images/Images.js'
-import ContactForm from '../components/ContactForm'
 
 
 const IndexPage = () => {
-    // document.querySelector("form").addEventListener("submit", handleSubmit);
-
-    // const handleSubmit = (e) => {
-    //     e.preventDefault()
-    //     let myForm = document.getElementById('contact');
-    //     let formData = new FormData(myForm)
-
-    //     fetch('/', {
-    //         method: 'POST',
-    //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //         body: new URLSearchParams(formData).toString()
-    //     }).then(() => console.log('Form successfully submitted')).catch((error) => alert(error))
-    // }
-
     return (
         <div>
             <img className='showcase-img' src={Images.renovation} alt='renovation' />
@@ -42,41 +27,34 @@ const IndexPage = () => {
                     </p>
                     <div className='pt-2 contact-flex'>
                         <div className='contact-form'>
-                            <ContactForm />
-                            {/* <form name='contact'
-                                method='post'
-                                id='contact'
-                                netlify-honeypot="bot-field"
-                                onSubmit={handleSubmit}
-                                netlify>
-                                <input type="hidden" name="contact" value="contact" />
+                            <form form-name='contact' data-netlify='true'>
                                 <div className='row'>
                                     <div className='input50'>
-                                        <input type='text' name='First Name' placeholder='First Name' required />
+                                        <input type='text' placeholder='First Name' />
                                     </div>
                                     <div className='input50'>
-                                        <input type='text' name='Last Name' placeholder='Last Name' required />
+                                        <input type='text' placeholder='Last Name' />
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='input50'>
-                                        <input type='email' name='Email' placeholder='Email' required />
+                                        <input type='email' placeholder='Email' />
                                     </div>
                                     <div className='input50'>
-                                        <input type='text' name='Subject' placeholder='Subject' required />
+                                        <input type='text' placeholder='Subject' />
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='input100'>
-                                        <textarea placeholder='Message' name='Message'></textarea>
+                                        <textarea placeholder='Message'></textarea>
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='input100'>
-                                        <input type='submit'>Submit</input>
+                                        <button className='btn btn-contact' type='submit'>Submit</button>
                                     </div>
                                 </div>
-                            </form> */}
+                            </form>
                         </div>
                         <div className='contact-info'>
                             <div className='info-box'>
