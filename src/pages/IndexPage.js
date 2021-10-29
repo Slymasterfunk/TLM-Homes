@@ -1,6 +1,5 @@
 import React from 'react'
 import Images from '../images/Images.js'
-import { Link } from 'react-router-dom'
 
 const IndexPage = () => {
     return (
@@ -27,31 +26,38 @@ const IndexPage = () => {
                     </p>
                     <div className='pt-2 contact-flex'>
                         <div className='contact-form'>
-                            <form>
+                            <form name='contact'
+                                method='POST'
+                                netlify-honeypot='bot-field'
+                                data-netlify='true'
+                                netlify>
+                                <p class='hidden'>
+                                    <label>Don’t fill this out if you’re human: <input name='bot-field' /></label>
+                                </p>
                                 <div className='row'>
                                     <div className='input50'>
-                                        <input type='text' placeholder='First Name' />
+                                        <input type='text' name='First Name' placeholder='First Name' />
                                     </div>
                                     <div className='input50'>
-                                        <input type='text' placeholder='Last Name' />
+                                        <input type='text' name='Last Name' placeholder='Last Name' />
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='input50'>
-                                        <input type='text' placeholder='Email' />
+                                        <input type='email' name='Email' placeholder='Email' />
                                     </div>
                                     <div className='input50'>
-                                        <input type='text' placeholder='Subject' />
+                                        <input type='text' name='Subject' placeholder='Subject' />
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='input100'>
-                                        <textarea placeholder='Message'></textarea>
+                                        <textarea placeholder='Message' name='Message'></textarea>
                                     </div>
                                 </div>
                                 <div className='row'>
                                     <div className='input100'>
-                                        <input type='submit' value='Send' />
+                                        <button className='btn contact-btn' type='submit'>Submit</button>
                                     </div>
                                 </div>
                             </form>
